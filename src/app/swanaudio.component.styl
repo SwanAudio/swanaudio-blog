@@ -1,0 +1,210 @@
+@import '_colors'
+
+header
+  background: bg-4
+  display: flex
+  flex: 0 0 auto
+  flex-direction: row
+  max-height: 70px
+  transition: 1000ms ease-in max-height
+
+  &>a>img
+    height: 85px
+    margin: -10px 10px
+
+  &>nav
+    display: flex
+    align-items: flex-end
+    flex: 1 0 0
+
+  &>aside
+    display: flex
+    align-items: flex-end
+    flex-direction: row
+    padding-right: 1rem
+
+    &>a
+      flex: 1 0 0
+      display: inline-block
+      padding: 0 1rem 10px
+      font-size: 1.25rem
+
+      i
+        transition: 200ms ease-out color
+      
+      &:hover .fa-twitter
+        color: twitter
+      &:hover .fa-youtube
+        color: youtube
+      &:hover .fa-instagram
+        color: instagram
+      &:hover .fa-facebook
+        color: facebook
+
+  &>nav>a
+    display: inline-block
+    padding: 10px 1.5vw
+
+  &>nav>a+a
+    border-left: 1px solid border-light
+
+  &>nav>a.active
+    border-bottom: 2px solid accent
+
+.mobile-toggle
+  display: none
+  padding-right: 1rem
+
+  &>i
+    font-size: 2rem
+
+@media (max-width: 500px)
+  header>a.mobile-toggle
+    flex: 1 0 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+
+  .copyright
+    padding: 20px 0 10px
+
+  header
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    z-index: 10
+
+  .active-menu
+    max-height: 1000px
+
+  .active-menu>nav, .active-menu>aside
+    display: flex
+
+  header>nav, header>aside
+    display: none
+    flex: 1 0 100%
+
+  header>aside>a
+    padding: 10px 1rem
+    animation: slide-down
+    animation-duration: 250ms
+    animation-fill-mode: forwards
+    opacity: 0
+
+    for $i in 1..4
+      &:nth-child({$i})
+        animation-delay: 150ms * $i
+
+  header>nav
+    align-items: center
+    flex-direction: column
+
+    &>a
+      width: 100%
+      text-align: center
+      border-left: none !important // Overriding a+a specificity
+      border-bottom: 1px solid border-light
+      opacity: 0
+      animation: slide-left
+      animation-duration: 350ms
+      animation-fill-mode: forwards
+
+      for $i in 1..4
+        &:nth-child({$i})
+          animation-delay: 200ms * $i
+
+  header>aside
+    align-items: space-around
+    text-align: center
+
+main
+  display: flex
+  flex: 1 0 auto
+
+  & >>> >*:not(:first-child)
+    display: flex
+    flex: 1 0 0
+    flex-direction: column
+
+  & >>> >*>h1
+    padding: 7rem 5rem 1rem
+    background: linear-gradient(
+      rgba(primary, .25),
+      rgba(primary, .25)
+    ), url('/assets/contact-banner.jpg') no-repeat center center
+    background-size: cover
+    color: font-light
+    text-shadow: 0 1px 2px rgba(0,0,0,.6)
+    box-shadow: 0 3px 3px rgba(0,0,0,0.21)
+    margin: 0
+
+  .hero
+    padding: 100px 0
+    text-align: center
+
+    h1
+      color: font-light
+    h2
+      color: accent
+
+  section
+    padding: 97px 20px
+
+footer
+  background: bg-5
+  box-shadow: inset 0px 3px 3px rgba(0,0,0,0.14)
+  color: font-light
+  display: flex
+  flex: 0 0 auto
+  flex-direction: column
+  align-content: stretch
+  align-items: stretch
+  justify-content: flex-start
+
+  &>p
+    text-align: center
+    padding: 1rem 0
+    margin: 1rem 0 0
+    background: bg-4
+    box-shadow: inset 0 2px 2px 0 rgba(0,0,0,.14), inset 0 3px 1px -2px rgba(0,0,0,.2), inset 0 1px 5px 0 rgba(0,0,0,.12)
+    color: font-light-muted
+
+  &>div
+    display: flex
+    flex-direction: row
+    width: 100%
+    max-width: 1440px
+    margin: 0 auto
+    padding: 10px 0
+
+    @media (max-width: 500px)
+      flex-direction: column
+      text-align: center
+
+    recent-tweets, recent-instagram
+      display: block
+
+    section, recent-tweets, recent-instagram
+      padding: 0 30px
+
+      p, ul
+        color: font-light-secondary
+
+    section
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      height: 100%
+
+      h5
+        width: 100%
+      a
+        width: 33%
+        line-height: 2
+
+        i, svg
+          margin-right: 1rem
+          color: primary
+          width: 20px

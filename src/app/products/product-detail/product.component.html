@@ -1,0 +1,51 @@
+<h1><a routerLink='/products'>Products</a> &gt; {{ product.name }}</h1>
+
+<product-nav></product-nav>
+
+<article>
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.tagline }}</p>
+
+  <aside>
+    <section class='panel-1'>
+      <h3>Specifications</h3>
+      <dl>
+        <ng-template ngFor let-spec [ngForOf]='product.specifications'>
+          <dt><span>{{ spec.name }}</span></dt>
+          <dd><span>{{ spec.value }}</span></dd>
+        </ng-template>
+      </dl>
+    </section>
+
+    <section class='panel-1'>
+      <!-- Product Freq Graph -->
+      <!-- use data instead of image ? -->
+      <img src="" alt="" width='100%' height='75px'>
+    </section>
+  </aside>
+
+  <section class='panel-1'>
+    <!-- Product Image -->
+
+    <!-- product description -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <!-- product features -->
+    <h3>Features</h3>
+    <ul>
+      <li *ngFor='let feature of product.features'>{{feature}}</li>
+    </ul>
+
+    <!-- product video / audio / additional images -->
+
+    <!-- product options -->
+    <h3>Available Options</h3>
+    <ul class='inline-list'>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+      <li><img src="" alt="" height='50px' width='50px'></li>
+    </ul>
+
+  </section>
+</article>

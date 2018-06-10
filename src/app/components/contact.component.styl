@@ -1,0 +1,98 @@
+@require '_colors'
+
+p
+  color: font-secondary
+
+a
+  color: font-primary
+
+  &>i.fa
+    font-size: 1.5em
+
+h1
+  padding: 12vh 5vw 1vh
+  background: linear-gradient(
+    rgba(primary, .25),
+    rgba(primary, .25)
+  ), url('/assets/contact-banner.jpg') no-repeat center center
+  background-size: cover
+  color: font-light
+  text-shadow: 0 1px 2px rgba(0,0,0,.6)
+  box-shadow: 0 3px 3px rgba(0,0,0,0.21)
+  margin: 0
+
+button
+  margin: 0
+
+section
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: flex-start
+  padding: 20px 10vw
+
+  &>form, &>aside
+    display: flex
+    flex-direction: column
+    margin: 10px
+    padding: 1rem 2rem 2rem
+
+  &>form
+    flex: 3 0 0
+
+    input, textarea
+      margin-bottom: 15px
+
+    &>ul
+      text-align: center
+
+  &>aside
+    flex: 1 0 0
+
+    &>img
+      height: 80px
+      margin-bottom: 10px
+
+    &>address
+      font-style: normal
+      color: font-secondary
+
+      a
+        text-transform: lowercase
+
+      &>p
+        margin: 0 0 10px
+
+        &>i
+          margin-right: 10px
+
+        .fa-location-arrow
+          color: orange
+        .fa-envelope-o
+          color: blue
+
+    hr
+      border: 0
+      border-top: 1px solid border-dark
+      width: 100%
+      margin: 20px auto
+
+    ul>li>a
+      display: block
+      text-align: center
+      padding: 10px 0
+      transition: linear 450ms background
+
+      &:hover
+        background: bg-3
+
+      .fa-twitter
+        color: twitter
+      .fa-linkedin
+        color: linkedin
+      .fa-facebook
+        color: facebook
+      .fa-youtube
+        color: youtube
+      .fa-instagram
+        color: instagram

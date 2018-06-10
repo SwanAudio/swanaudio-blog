@@ -1,0 +1,49 @@
+@require '_colors'
+
+a.email
+  color: accent
+  text-transform: none
+
+.feature
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: flex-start
+  flex: 1 0 auto
+  background: url('/assets/bg_tube.jpg') no-repeat center center
+  background-size: cover
+  min-height: 550px
+  padding: 11vh 4vw
+
+  h1
+    color: font-light
+    font-size: 2em
+    margin: 0 0 10px
+
+  h2
+    color: font-light-secondary
+    font-size: 1.5em
+    font-weight: 400
+    margin:  0 0 10px
+
+  h1, h2
+    text-shadow: 0 1px 2px rgba(0,0,0,.6)
+
+.accents
+  display: flex
+  flex-direction: row
+  padding: 0 2vw
+
+  @media (max-width: 500px)
+    flex-direction: column
+    padding: 0
+
+  &>*
+    flex: 1 1 0
+    margin: 1vw 2vw
+    text-align: center
+    padding-bottom: 20px
+    color: font-secondary
+
+    @media (max-width: 500px)
+      margin: 5px 0
