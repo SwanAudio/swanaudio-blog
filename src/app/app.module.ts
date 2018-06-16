@@ -21,6 +21,8 @@ import { PrivacyComponent } from './components/privacy.component';
 import { NewsletterSignupComponent} from './components/newsletter-signup.component';
 import { LandingComponent } from './components/landing.component';
 import { TermsComponent } from './components/terms.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   imports: [
@@ -31,6 +33,8 @@ import { TermsComponent } from './components/terms.component';
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
 
     ProductsModule,
+
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   declarations: [
     AboutComponent,
