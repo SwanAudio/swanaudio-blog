@@ -11,6 +11,7 @@ import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 /* Module */
+import { BlogModule } from './blog/blog.module';
 import { ProductsModule } from './products/products.module';
 import { InfoModule  } from './info/info.module';
 
@@ -30,6 +31,7 @@ import { environment } from '../environments/environment';
     RoutingModule,
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
 
+    BlogModule,
     ProductsModule,
     InfoModule,
 
