@@ -12,15 +12,13 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 /* Module */
 import { ProductsModule } from './products/products.module';
+import { InfoModule  } from './info/info.module';
 
 /* Components */
-import { AboutComponent } from './about/about.component';
 import { AppComponent } from './swanaudio.component';
 import { ContactComponent } from './components/contact.component';
-import { PrivacyComponent } from './components/privacy.component';
 import { NewsletterSignupComponent} from './components/newsletter-signup.component';
 import { LandingComponent } from './components/landing.component';
-import { TermsComponent } from './components/terms.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
@@ -33,17 +31,15 @@ import { environment } from '../environments/environment';
     Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
 
     ProductsModule,
+    InfoModule,
 
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   declarations: [
-    AboutComponent,
     AppComponent,
     ContactComponent,
     LandingComponent,
     NewsletterSignupComponent,
-    PrivacyComponent,
-    TermsComponent,
   ],
   providers: [
     Title,
