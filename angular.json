@@ -105,5 +105,8 @@
       }
     }
   },
-  "defaultProject": "swanaudio-static"
+  "defaultProject": "swanaudio-static",
+  "cli": {
+    "packageManager": "yarn"
+  }
 }
