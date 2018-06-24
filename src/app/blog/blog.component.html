@@ -1,1 +1,5 @@
-blog
+<h1>Blog</h1>
+
+<section>
+  <blog-preview *ngFor='let post of posts' [id]='post.id' class='panel-1'></blog-preview>
+</section>

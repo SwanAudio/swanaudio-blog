@@ -1,0 +1,33 @@
+@require '_colors';
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  &>:not(img) {
+    padding: 1rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    padding: 1.5rem 1rem 0;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  figure {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+  }
+}
