@@ -18,7 +18,7 @@
     "@angular/http": "^6.0.3",
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
-    "@angular/pwa": "^0.6.8",
+    "@angular/pwa": "^0.803.29",
     "@angular/router": "^6.0.3",
     "angulartics2": "^6.1.0",
     "core-js": "^2.5.4",
